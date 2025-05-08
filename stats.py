@@ -1,6 +1,15 @@
+import sys
 from collections import Counter
 
-text_file = "books/frankenstein.txt"
+# Check if an argument was provided
+if len(sys.argv) > 1:
+    text_file = sys.argv[1]
+    #print(f"Hello, {name}!")
+else:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
+# text_file = "books/frankenstein.txt"
 chars_dict = {}
 
 def get_num_words():
